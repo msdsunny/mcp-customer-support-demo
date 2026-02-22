@@ -1,0 +1,13 @@
+# Ignore virtual environments
+venv/
+
+# Environment variables
+.env
+.env.local
+
+# Database files
+*.db
+*.sqlite3
+
+# Python cache
+__pycache__/
