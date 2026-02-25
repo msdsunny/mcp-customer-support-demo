@@ -7,7 +7,9 @@ load_dotenv()
 
 # Create the MCP Server
 mcp = FastMCP("Support Database Server")
-DB_PATH = "customers.db"
+
+# Use absolute path relative to this file so it works in serverless environments
+DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "customers.db")
 
 def query_db(query: str, args: tuple = ()) -> list[dict]:
     """Helper function to execute a database query and return rows as dictionaries."""
@@ -104,5 +106,5 @@ def get_all_customers() -> str:
     return output
 
 if __name__ == "__main__":
-    # Run over stdio
+    # Run over stdio for local development
     mcp.run(transport='stdio')
