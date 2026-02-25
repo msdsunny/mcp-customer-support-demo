@@ -2,27 +2,7 @@
 
 ## Database Schema Diagram
 
-```mermaid
-erDiagram
-    customers ||--o{ orders : has
-    
-    customers {
-        INTEGER id PK
-        TEXT name
-        TEXT email
-        TEXT phone
-        BOOLEAN vip_status
-    }
-    
-    orders {
-        INTEGER order_id PK
-        INTEGER customer_id FK
-        TEXT product
-        TEXT order_date
-        TEXT status
-        TEXT tracking_number
-    }
-```
+<img width="1848" height="1070" alt="mermaid-drawing" src="https://github.com/user-attachments/assets/81922daf-cc0e-481b-9c21-ef440be52e45" />
 
 ## Data Values 
 
